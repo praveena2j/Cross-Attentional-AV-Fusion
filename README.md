@@ -1,2 +1,2 @@
 # Cross-Attentional-AV-Fusion
-Cross Attentional AV Fusion for Dimensional Emotion Recognition
+Code for our paper "Cross Attentional AV Fusion for Dimensional Emotion Recognition" accepted to FG2021.
