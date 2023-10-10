@@ -14,7 +14,7 @@ If you find this code useful for your research, please cite our paper.
  }
 ```
 
-This code uses the Affwild2 dataset to validate the proposed approach for Dimensional Emotion Recognition. There are three major blocks in this repository to reproduce the results of our paper. This code uses Mixed Precision Training (torch.cuda.amp). The dependencies and packages required to reproduce the environment of this repository can be found in the `environment.yml` file. 
+This code uses the RECOLA dataset to validate the proposed approach for Dimensional Emotion Recognition. There are three major blocks in this repository to reproduce the results of our paper. This code uses Mixed Precision Training (torch.cuda.amp). The dependencies and packages required to reproduce the environment of this repository can be found in the `environment.yml` file. 
 
 ### Creating the environment
 Create an environment using the `environment.yml` file
@@ -23,7 +23,9 @@ Create an environment using the `environment.yml` file
 
 ### Models
 The pre-trained models of audio backbones are obtained [here](https://drive.google.com/file/d/1XEhoZKFGKJPQHj9Mn6_xwEH62g4mwWsk/view?usp=drive_link)
+
 The pre-trained models of visual backbones are obtained [here](https://drive.google.com/file/d/1POt94VS7F75F6Pem8clP4zWtXVd98GRF/view?usp=drive_link)
+
 The fusion models trained using our fusion approach can be found [here](https://drive.google.com/file/d/1T7I4dH66LYI2sFKHhQ_IrBKvQfjhzapp/view?usp=sharing)
 
 ```
@@ -50,19 +52,19 @@ cam_model.pt:  Fusion model trained using our approach on the RECOLA dataset
 ### Step One: Download the dataset <a name="PD"></a>
 [Return to Table of Content](#Table_of_Content)
 Please download the following.
-  + The dataset for the valence-arousal track can be downloaded [here](https://ibug.doc.ic.ac.uk/resources/aff-wild2/)
+  + The dataset can be downloaded [here]([https://ibug.doc.ic.ac.uk/resources/aff-wild2/](https://diuf.unifr.ch/main/diva/recola/download.html))
 
 ### Step Two: Preprocess the visual modality <a name="PD"></a>
 [Return to Table of Content](#Table_of_Content)
-  + The cropped-aligned images are necessary. They are used to form the visual input. They are already provided by the dataset organizers. Otherwise, you may choose to use [OpenFace toolkit](https://github.com/TadasBaltrusaitis/OpenFace/releases) to extract the cropped-aligned images. However, the per-frame success rate is lower compared to the database-provided version.
+  + You may choose to use [OpenFace toolkit](https://github.com/TadasBaltrusaitis/OpenFace/releases) to extract the cropped-aligned images.
 
 ### Step Three: Preprocess the audio modality <a name="PD"></a>
 [Return to Table of Content](#Table_of_Content)
-  + The audio files are extracted and segmented to generate the corresponding audio files in alignment with the visual files using [mkvextract](https://mkvtoolnix.download/). To generate these audio files, you can use the file Preprocessing/audio_preprocess.py. 
+  + The audio files are extracted and segmented to generate the corresponding audio files in alignment with the visual files using [mkvextract](https://mkvtoolnix.download/). 
 
 ### Step Four: Preprocess the annotations <a name="PD"></a>
 [Return to Table of Content](#Table_of_Content)
-  + The annotations provided by the dataset organizers are preprocessed to obtain the labels of aligned audio and visual files. To generate these audio files, you can use the file Preprocessing/preprocess_labels.py. 
+  + The annotations provided by the dataset organizers are preprocessed to obtain the labels of aligned audio and visual files. 
 
 ## Training <a name="DP"></a>
 [Return to Table of Content](#Table_of_Content)
@@ -70,5 +72,5 @@ Please download the following.
 
 ## Inference <a name="DP"></a>
 [Return to Table of Content](#Table_of_Content)
-  + The results of the proposed model can be reproduced using the trained model. In order to obtain the predictions on the test set using our proposed model, we can use the test.py.
+  + The results of the proposed model can be reproduced using the trained model.
 
