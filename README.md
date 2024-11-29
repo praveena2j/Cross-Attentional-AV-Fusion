@@ -22,11 +22,11 @@ Create an environment using the `environment.yml` file
 `conda env create -f environment.yml`
 
 ### Models
-The pre-trained models of audio backbones are obtained [here](https://drive.google.com/file/d/1XEhoZKFGKJPQHj9Mn6_xwEH62g4mwWsk/view?usp=drive_link)
+The pre-trained models of audio backbones are obtained [here](https://drive.google.com/file/d/1UA4mUB0XPICm8tFiIANMvDCBff4ZxLMT/view?usp=sharing)
 
-The pre-trained models of visual backbones are obtained [here](https://drive.google.com/file/d/1POt94VS7F75F6Pem8clP4zWtXVd98GRF/view?usp=drive_link)
+The pre-trained models of visual backbones are obtained [here](https://drive.google.com/file/d/1KmeqxY2eJ-vb-wIi-a0gQGGjNR_E9K1-/view?usp=sharing)
 
-The fusion models trained using our fusion approach can be found [here](https://drive.google.com/file/d/1T7I4dH66LYI2sFKHhQ_IrBKvQfjhzapp/view?usp=sharing)
+The fusion models trained using our fusion approach can be found [here](https://drive.google.com/file/d/1invmOyC4dfkKb9_HaGpLk6o933fJBGG4/view?usp=sharing)
 
 ```
 audiomodel.t7:  Visual model trained using RECOLA dataset
